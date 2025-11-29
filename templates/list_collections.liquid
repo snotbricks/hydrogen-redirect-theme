@@ -1,0 +1,56 @@
+{% comment %}
+  Redirect template for list_collections page.
+  This template redirects to the Hydrogen storefront collections page.
+{% endcomment %}
+
+{%- liquid
+  assign storefront_hostname = settings.storefront_hostname
+  if storefront_hostname == blank
+    assign storefront_hostname = request.host
+  endif
+
+  assign redirect_url = storefront_hostname | append: '/collections'
+  
+  # Handle custom redirects
+  if settings.custom_redirects != blank
+    assign custom_redirects = settings.custom_redirects | newline_to_br | split: '<br />'
+    for redirect_rule in custom_redirects
+      assign rule_parts = redirect_rule | split: ' > '
+      if rule_parts.size == 2
+        assign source_path = rule_parts[0] | strip
+        assign target_path = rule_parts[1] | strip
+        if request.path == source_path
+          assign redirect_url = storefront_hostname | append: target_path
+          break
+        endif
+      endif
+    endfor
+  endif
+
+  # Add customer account query params if enabled
+  if settings.customer_accounts_enabled
+    if customer
+      assign redirect_url = redirect_url | append: '?logged_in=true'
+      if customer.default_address.company != blank
+        assign redirect_url = redirect_url | append: '&company_location_id=' | append: customer.default_address.company
+      endif
+    endif
+  endif
+-%}
+
+<!DOCTYPE html>
+<html lang="{{ request.locale.iso_code }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url={{ redirect_url }}">
+  <link rel="canonical" href="{{ redirect_url }}">
+  <title>{{ 'general.meta.redirecting' | t }}</title>
+  <script>
+    window.location.href = "{{ redirect_url }}";
+  </script>
+</head>
+<body>
+  <p>{{ 'general.meta.redirecting' | t }} <a href="{{ redirect_url }}">{{ 'general.meta.click_here' | t }}</a></p>
+</body>
+</html>
+
