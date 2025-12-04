@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "storefront_hostname": "makhi-unjudicable-instantly.ngrok-free.dev",
+    "storefront_hostname": "https://snotbricks.share.zrok.io",
     "custom_redirects": "",
     "integrate_with_customer_accounts": true,
     "content_for_index": []
