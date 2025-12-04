@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "storefront_hostname": "local.snotbricks.com:3000",
+    "storefront_hostname": "local.snotbricks.com:8443",
     "integrate_with_customer_accounts": true,
     "content_for_index": []
   }
