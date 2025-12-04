@@ -9,8 +9,8 @@
  */
 {
   "current": {
-    "storefront_hostname": "local.snotbricks.com",
-    "custom_redirects": "/password ? /account/login",
+    "storefront_hostname": "makhi-unjudicable-instantly.ngrok-free.dev",
+    "custom_redirects": "",
     "integrate_with_customer_accounts": true,
     "content_for_index": []
   }
