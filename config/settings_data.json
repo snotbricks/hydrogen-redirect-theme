@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "storefront_hostname": "production.snotbricks.com",
+    "storefront_hostname": "snotbricks.com",
     "custom_redirects": "",
     "integrate_with_customer_accounts": true,
     "content_for_index": []
