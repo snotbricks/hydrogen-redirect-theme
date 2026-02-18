@@ -11,7 +11,7 @@
   "current": {
     "storefront_hostname": "snotbricks.com",
     "custom_redirects": "",
-    "integrate_with_customer_accounts": true,
+    "integrate_with_customer_accounts": false,
     "content_for_index": []
   },
   "platform_customizations": {
