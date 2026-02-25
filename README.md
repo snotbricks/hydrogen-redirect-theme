@@ -1,15 +1,15 @@
 # Hydrogen Redirect Theme
 
-[Download](https://github.com/Shopify/hydrogen-redirect-theme/archive/refs/heads/master.zip)
+[Download](https://github.com/Shopify/hydrogen-redirect-theme/archive/refs/heads/main.zip)
 
 When launching a Hydrogen storefront, you’ll likely also want to redirect
-any traffic that happens to hit your Liquid store too. This theme allows you
+any traffic that happens to hit your Liquid store too. This theme
 helps you do that while also making sure you retain features like the bot
 detection checkpoint, and discount links.
 
 ## Setup
 
-1. [Download the theme](https://github.com/Shopify/hydrogen-redirect-theme/archive/refs/heads/master.zip)
+1. [Download the theme](https://github.com/Shopify/hydrogen-redirect-theme/archive/refs/heads/main.zip)
 2. Navigate to **Online Store -> Themes** in your Shopify admin
 3. **Upload** the theme to your Theme Library
 4. **Customize** the Redirect theme
